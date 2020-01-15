@@ -1,0 +1,38 @@
+package com.everis.producto.service.impl;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.everis.producto.dto.ProductoReducidoDTO;
+import com.everis.producto.entity.Producto;
+import com.everis.producto.repository.ProductoRepository;
+import com.everis.producto.service.ProductoService;
+
+
+@Service
+public class ProductoServiceImpl implements ProductoService{
+	
+	@Autowired
+	private ProductoRepository productoRepository;
+	
+	@Override
+	public List<Producto> obtenerProductos() {	
+		return productoRepository.findAll();
+	}
+
+	@Override
+	public Producto guardarProducto(ProductoReducidoDTO producto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Producto> obtenerProductoXId(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

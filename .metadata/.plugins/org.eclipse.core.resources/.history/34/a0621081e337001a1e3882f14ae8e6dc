@@ -1,0 +1,5 @@
+package com.everis.producto.repository;
+
+public class ProductoRepository {
+
+}

@@ -1,0 +1,7 @@
+package com.everis.producto.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+public class ProductoRepository extend CrudRepository<Producto, Long>{
+
+}

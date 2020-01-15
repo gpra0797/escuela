@@ -1,0 +1,36 @@
+package com.everis.producto.service.impl;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
+import com.everis.producto.dto.ProductoReducidoDTO;
+import com.everis.producto.entity.Producto;
+import com.everis.producto.service.ProductoService;
+
+
+@Service
+public class ProductoServiceImpl implements ProductoService{
+
+	@Override
+	public List<Producto> obtenerProductos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Producto guardarProducto(ProductoReducidoDTO producto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Producto> obtenerProductoXId(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

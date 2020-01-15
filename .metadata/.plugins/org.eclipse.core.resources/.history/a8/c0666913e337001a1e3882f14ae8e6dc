@@ -1,0 +1,17 @@
+package com.everis.producto.controlador;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.everis.producto.dto.ProductoDTO;
+
+@RestController
+public class ProductoControlador {
+	
+	@GetMapping(value = "/productos")
+	public List<ProductoDTO> obtenerProductos() {
+		return null;
+	}
+}
