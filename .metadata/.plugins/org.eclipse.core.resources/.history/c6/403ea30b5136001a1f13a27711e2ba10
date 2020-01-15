@@ -1,0 +1,10 @@
+package com.everis.escuela.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.Repository;
+
+import com.everis.escuela.entidad.Persona;
+
+public interface PersonaRepository extends CrudRepository<Persona,Long> {
+	
+}

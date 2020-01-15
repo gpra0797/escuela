@@ -1,0 +1,22 @@
+package com.everis.escuela.service;
+
+import java.util.List;
+
+import com.everis.escuela.dto.CompaniaDTO;
+import com.everis.escuela.entidad.Compania;
+import com.everis.escuela.exceptions.ResourceNotFoundException;
+
+public interface CompaniaService {
+	
+	
+	public Iterable<CompaniaDTO> obtenerCompanias();// Iterable
+	
+	public Compania guardarCompania(Compania Compania);
+	
+	public Compania obtenerCompaniaXId(Long id) throws ResourceNotFoundException;
+	
+	public void deleteCompaniaXId(Long id);
+	
+	public boolean existsById(Long id);
+	
+}

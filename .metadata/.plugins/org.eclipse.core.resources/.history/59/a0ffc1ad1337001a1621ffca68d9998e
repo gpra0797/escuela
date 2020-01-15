@@ -1,0 +1,5 @@
+package com.everis.escuela.util;
+
+public class CustomRepositoryImpl {
+
+}

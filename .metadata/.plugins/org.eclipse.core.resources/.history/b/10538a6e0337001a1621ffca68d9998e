@@ -1,0 +1,12 @@
+package com.everis.escuela.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.everis.escuela.entidad.Compania;
+
+
+@Repository
+public interface CompaniaRepository extends CrudRepository<Compania,Long> {
+	
+}

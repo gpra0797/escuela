@@ -1,0 +1,49 @@
+package com.everis.escuela.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.everis.escuela.entidad.Persona;
+import com.everis.escuela.service.impl.PersonaServiceImpl;
+
+@RestController
+public class EscuelaControlador {
+	
+	@Autowired
+	private PersonaServiceImpl personaService;
+	
+	@RequestMapping("/personas")
+	public List<Persona> getPersonas(){
+		return personaService.obtenerPersonas();
+	}
+	
+	
+	@RequestMapping(value="/personas", method = RequestMethod.POST)
+	public Persona insertPersona(
+			@RequestBody Persona persona) {
+		 personaService.guardarPersona(persona);
+		 return persona ;
+	}
+	
+	@GetMapping("/personas/{id}")
+	public List<Persona> findById(){
+		return personaService.obtenerPersonas();
+	}
+	
+	
+//	@Value("${palabra}")
+//	String palabra;
+//	
+//	@RequestMapping("/palabra")
+//	public String obtenerPalabra() {
+//		return "La palabra obtenida es: " + palabra;
+//	}
+
+}

@@ -1,0 +1,20 @@
+package com.everis.escuela.service;
+
+import java.util.List;
+
+import com.everis.escuela.entidad.Compania;
+import com.everis.escuela.exceptions.ResourceNotFoundException;
+
+public interface CompaniaService {
+	
+	public List<Compania> obtenerCompanias();
+	
+	public Compania guardarCompania(Compania Compania);
+	
+	public Compania obtenerCompaniaXId(Long id) throws ResourceNotFoundException;
+	
+	public void deleteCompaniaXId(Long id);
+	
+	public boolean existsById(Long id);
+	
+}

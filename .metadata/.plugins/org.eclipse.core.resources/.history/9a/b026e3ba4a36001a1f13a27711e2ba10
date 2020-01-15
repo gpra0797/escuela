@@ -1,0 +1,5 @@
+package com.everis.escuela.entidad;
+
+public class Persona {
+
+}

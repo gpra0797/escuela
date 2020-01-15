@@ -1,0 +1,18 @@
+package com.everis.escuela.dto;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+public class PersonaReducidaDTO {		
+	
+	
+	private String nombres;
+	private String apellido1;
+	private String apellido2;
+	private String dni;
+
+}

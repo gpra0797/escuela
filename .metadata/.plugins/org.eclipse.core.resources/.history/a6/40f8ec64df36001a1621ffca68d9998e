@@ -1,0 +1,18 @@
+package com.everis.escuela.service;
+
+import java.util.List;
+
+import com.everis.escuela.entidad.Persona;
+
+public interface PersonaService {
+	
+	public List<Persona> obtenerPersonas();
+	
+	public Persona guardarPersona(Persona persona);
+	
+	public Persona obtenerPersonaXId(Long id);
+	
+	public void deletePersonaXId(Long id);
+	
+	
+}

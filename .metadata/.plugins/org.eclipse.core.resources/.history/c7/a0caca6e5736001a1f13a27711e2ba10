@@ -1,0 +1,35 @@
+package com.everis.escuela.service.impl;
+
+import java.util.List;
+import java.util.Spliterator;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.everis.escuela.entidad.Persona;
+import com.everis.escuela.repository.PersonaRepository;
+import com.everis.escuela.service.PersonaService;
+
+@Service
+public class PersonaServiceImpl implements PersonaService{
+	
+	@Autowired		
+	private PersonaRepository personaRepository;
+	
+	@Override
+	public List<Persona> obtenerPersonas() {		
+//		return (List<Persona>) personaRepository.findAll();
+		return StreamSupport.stream(personaRepository.findAll().spliterator(), false).collect(Collectors.toList());
+	}
+
+	@Override
+	public void guardarPersona(Persona persona) {
+		// TODO Auto-generated method stub
+		personaRepository.save(persona);
+	}
+
+}

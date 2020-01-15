@@ -1,0 +1,8 @@
+package com.everis.escuela.exceptions;
+
+public class ErrorDetails {
+	
+	public ErrorDetails() {
+		
+	}
+}

@@ -1,0 +1,9 @@
+package com.everis.escuela.repository;
+
+import org.springframework.data.repository.Repository;
+
+import com.everis.escuela.entidad.Persona;
+
+interface PersonaRepository extends Repository<Persona,Long> {
+	
+}

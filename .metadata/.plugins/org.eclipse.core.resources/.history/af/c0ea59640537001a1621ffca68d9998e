@@ -1,0 +1,32 @@
+package com.everis.escuela.dto;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.everis.escuela.entidad.Compania;
+import com.everis.escuela.entidad.Persona;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+public class PersonaDTO {
+		
+	
+	private Long id;
+	private String nombres;
+	private String apellido1;
+	private String apellido2;
+	private String dni;
+	private Compania compania;
+	
+}

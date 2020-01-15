@@ -1,0 +1,5 @@
+package com.everis.escuela.exceptions;
+
+public class ResourceNotFoundException extends Exception{
+
+}

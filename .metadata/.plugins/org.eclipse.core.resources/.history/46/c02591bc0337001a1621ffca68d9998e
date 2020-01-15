@@ -1,0 +1,17 @@
+package com.everis.escuela.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.everis.escuela.entidad.Compania;
+import com.everis.escuela.entidad.Persona;
+
+@Repository
+public interface PersonaRepository extends CrudRepository<Persona,Long> {
+	
+	
+	
+}

@@ -1,0 +1,12 @@
+package com.everis.escuela.util;
+
+import java.io.Serializable;
+
+import javax.persistence.EntityManager;
+
+public class CustomRepositoryImpl<T, ID extends Serializable> extends SimpleJpaRespository<T,ID> implements CustomRepository<T,Serializable>{
+	
+	private final EntityManager entityManager;
+	
+	
+}

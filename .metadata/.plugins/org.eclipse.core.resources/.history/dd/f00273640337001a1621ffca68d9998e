@@ -1,0 +1,39 @@
+package com.everis.escuela.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class EscuelaControlador {
+	
+//	@Autowired
+//	private PersonaServiceImpl personaService;
+//	
+//	@RequestMapping("/personas")
+//	public List<Persona> getPersonas(){
+//		return personaService.obtenerPersonas();
+//	}
+//	
+//	@ResponseStatus(HttpStatus.CREATED)
+//	@RequestMapping(value="/personas", method = RequestMethod.POST)	
+//	public Persona savePersona(
+//			@RequestBody Persona persona) {		
+//		 return  personaService.guardarPersona(persona);
+//	}
+//	
+//	@GetMapping("/personas/{id}")
+//	public Persona findById(@PathVariable Long id) throws ResourceNotFoundException{		
+//		return personaService.obtenerPersonaXId(id);
+//	
+//	}
+	
+	
+	
+//	@Value("${palabra}")
+//	String palabra;
+//	
+//	@RequestMapping("/palabra")
+//	public String obtenerPalabra() {
+//		return "La palabra obtenida es: " + palabra;
+//	}
+
+}

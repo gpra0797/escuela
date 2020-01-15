@@ -1,0 +1,54 @@
+package com.everis.escuela.service.impl;
+
+import java.util.List;
+
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.everis.escuela.entidad.Compania;
+import com.everis.escuela.exceptions.ResourceNotFoundException;
+import com.everis.escuela.repository.CompaniaRepository;
+import com.everis.escuela.service.CompaniaService;
+
+@Service
+public class CompaniaServiceImpl implements CompaniaService{
+	
+	@Autowired		
+	private CompaniaRepository CompaniaRepository;
+	
+	@Override
+	public List<Compania> obtenerCompanias() {		
+//		return (List<Compania>) CompaniaRepository.findAll();
+		return StreamSupport.stream(CompaniaRepository.findAll().spliterator(), false).collect(Collectors.toList());
+	}
+
+	@Override
+	public Compania guardarCompania(Compania Compania) {
+		// TODO Auto-generated method stub
+		return CompaniaRepository.save(Compania);
+	}
+
+	@Override
+	public Compania obtenerCompaniaXId(Long id) throws ResourceNotFoundException {	
+	
+		 return CompaniaRepository.findById(id)
+				 .orElseThrow(()-> new ResourceNotFoundException(String.format("No se encontró el id %s en la bd.",id)));
+		
+	}
+
+	@Override
+	public void deleteCompaniaXId(Long id) {		
+		 CompaniaRepository.deleteById(id);
+	}
+
+	@Override
+	public boolean existsById(Long id) {
+		// TODO Auto-generated method stub
+		return CompaniaRepository.existsById(id);
+	}
+
+}
