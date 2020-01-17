@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,6 +23,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name ="producto")
 public class Producto {
 		
 	@Id
@@ -40,7 +42,7 @@ public class Producto {
 	@Column(name="precio")
 	private BigDecimal precio;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private TipoProducto tipoProducto;
 	
 	@OneToOne(cascade = CascadeType.ALL)

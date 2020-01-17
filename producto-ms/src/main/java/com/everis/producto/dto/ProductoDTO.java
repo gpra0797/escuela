@@ -34,5 +34,7 @@ public class ProductoDTO {
 	
 	@JsonProperty(value = "imagen_producto")
 	private ImagenProductoDTO imagenProducto;
+	
+	private BigDecimal cantidadStock;
 }
 

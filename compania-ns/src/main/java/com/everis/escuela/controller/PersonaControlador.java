@@ -7,6 +7,8 @@ import javax.validation.Valid;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,11 +26,14 @@ import com.everis.escuela.exceptions.ValidationException;
 import com.everis.escuela.service.impl.PersonaServiceImpl;
 
 @RestController
+@RefreshScope
 public class PersonaControlador {
 	
 	@Autowired
 	private PersonaServiceImpl PersonaService;
 	
+	@Value("${igv}")
+	private String igv;
 	
 	@RequestMapping("/Personas")
 	public List<PersonaDTO> getPersonas(){
@@ -70,6 +75,12 @@ public class PersonaControlador {
 	
 	}
 	
-
+	@GetMapping("/igv")
+	public String getIgv(){
+		
+		return "EL igv es:" + igv;
+	
+	}
+	
 
 }
